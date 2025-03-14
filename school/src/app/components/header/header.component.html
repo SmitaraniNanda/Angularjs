@@ -1,0 +1,12 @@
+<div *ngIf="objects && objects.length">
+    <h2>Available Objects</h2>
+    <ul>
+        <li *ngFor="let object of objects | sort: 'name':'asc' ">
+            <span [ngStyle]="{'color': object.color}">{{ object.name | uppercase }}</span> - 
+            <span>{{ object.price | currency:'USD' }}</span>
+        </li>
+    </ul>
+</div>
+<div *ngIf="!objects || !objects.length">
+    <p>No objects available.</p>
+</div>
