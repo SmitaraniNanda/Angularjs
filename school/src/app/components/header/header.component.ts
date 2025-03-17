@@ -1,11 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SortpipePipe } from '../../sortpipe.pipe';
+import { ProductComponent } from '../product/product.component';
 
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule,SortpipePipe],
+  imports: [CommonModule,SortpipePipe,ProductComponent
+    
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
