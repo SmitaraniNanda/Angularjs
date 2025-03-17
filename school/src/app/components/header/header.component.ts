@@ -17,4 +17,10 @@ export class HeaderComponent {
     { name: 'Grapes', color: 'Black', price: 120 },
     
   ];
+  parentMessage = "Hello from parent";
+  childMessage = " ";
+  
+  receiveMessage(message : string){
+    this.childMessage = message;
+  }
 }
